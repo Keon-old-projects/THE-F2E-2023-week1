@@ -1,0 +1,18 @@
+// 網頁基本設定(html tag標籤)
+
+// Reset css
+@import "reset";
+// @import "normalize";
+
+
+body{
+    font-size: $font-size-base;
+}
+a{
+    @include link{
+        color: $primary;
+    }
+    @include link-hover{
+        color: $primary-variant;
+    }
+}
