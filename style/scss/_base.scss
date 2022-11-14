@@ -8,11 +8,18 @@
 body{
     font-size: $font-size-base;
 }
+.bg-img{
+    background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash\ 1.png");
+}
+header{
+    padding: 2rem;
+}
+
 a{
     @include link{
         color: $primary;
     }
     @include link-hover{
-        color: $primary-variant;
+        color: $primary;
     }
 }
