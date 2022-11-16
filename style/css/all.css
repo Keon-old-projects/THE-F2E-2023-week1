@@ -1,10 +1,27 @@
 @charset "UTF-8";
 body {
   font-weight: 700;
+  background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash 1.png");
 }
 
-.bg-img {
-  background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash 1.png");
+section {
+  max-width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.section7 main {
+  position: absolute;
+  top: -1%;
+  margin-top: 20%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+}
+
+.ZigZag span {
+  margin-top: -15px;
 }
 
 .top-middle {
@@ -20,8 +37,59 @@ body {
   background-size: contain;
 }
 
+.loop {
+  display: inline-block;
+  font-family: "Laser Corps 3D";
+  font-size: 5rem;
+  color: transparent;
+  white-space: nowrap;
+  height: 100%;
+  -webkit-text-stroke: 1px white;
+}
+
+.loop > span {
+  display: inline-block;
+}
+
+.after-arrow {
+  position: relative;
+}
+
+.after-arrow::after {
+  content: " ";
+  background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
+  background-size: contain;
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
 .f-img {
   width: 35%;
+}
+
+.trophy-card-bg {
+  background: linear-gradient(to right, #5EE7DF, #B490CA);
+}
+
+.card-header {
+  padding: 4px;
+}
+.card-header h5.card-title {
+  top: -3%;
+  left: -1%;
+}
+
+.rounded-20 {
+  border-radius: 20px !important;
+}
+
+.list-group-disc {
+  list-style-type: disc;
 }
 
 .toBig {
@@ -45,23 +113,4 @@ body {
   to {
     transform: scale(1);
   }
-}
-.section2 {
-  height: 100vh;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.loop {
-  display: inline-block;
-  font-family: "Laser Corps 3D";
-  font-size: 5rem;
-  color: transparent;
-  white-space: nowrap;
-  height: 100%;
-  -webkit-text-stroke: 1px white;
-}
-
-.loop > span {
-  display: inline-block;
 }/*# sourceMappingURL=all.css.map */

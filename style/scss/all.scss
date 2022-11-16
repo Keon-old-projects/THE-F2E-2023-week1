@@ -4,7 +4,136 @@
 // 全域變數&mixin
 
 
-// 通用元件
-@import "base";
+// base*********************************************
+body {
+    font-weight: 700;
+    background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash\ 1.png");
+}
 
-// 共同框架
+section {
+    max-width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+// layout*********************************************
+
+.section6 {
+    // background-image: url(../../images/);
+}
+
+.section7 {
+
+    // background-image: url(../../images/Icon/Vector1.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    main {
+        position: absolute;
+        top: -1%;
+        margin-top: 20%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%);
+    }
+
+}
+
+
+// main**********************************************
+.ZigZag {
+    span {
+        margin-top: -15px;
+    }
+}
+
+.top-middle {
+    top: 50%;
+    margin-top: -80px;
+}
+
+.troubled {
+    height: 100vh;
+    background-image: url(../../images/困擾\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.loop {
+    display: inline-block;
+    font-family: "Laser Corps 3D";
+    font-size: 5rem;
+    color: transparent;
+    white-space: nowrap;
+    height: 100%;
+    -webkit-text-stroke: 1px white;
+}
+
+.loop>span {
+    display: inline-block;
+}
+
+.after-arrow {
+    position: relative;
+}
+
+.after-arrow::after {
+    content: " ";
+    background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
+    background-size: contain;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+
+
+
+// module*********************************************
+.f-img {
+    width: 35%;
+}
+
+.trophy-card-bg{
+    background:linear-gradient(to right,#5EE7DF,#B490CA) ;
+
+}
+.box-shadow-linear{
+    
+}
+.card-header{
+    padding: 4px;
+    h5.card-title{
+        top: -3%;
+        left: -1%;
+        
+    }
+}
+
+.rounded-20{
+    border-radius: 20px !important;
+}
+.list-group-disc{
+    list-style-type: disc;
+}
+// animation*****************************************
+.toBig {
+    animation: enlarge 1.5s ease-in-out;
+}
+
+@keyframes enlarge {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
