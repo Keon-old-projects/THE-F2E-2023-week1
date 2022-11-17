@@ -2,6 +2,7 @@
 // @import "bootstrap/bootstrap"; 
 
 // 全域變數&mixin
+@import "bootstrap.scss";
 
 
 // base******************************************************************************
@@ -9,88 +10,12 @@ body {
     font-weight: 700;
     background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash\ 1.png");
 }
-header{
+
+header {
     padding: 2.5rem 2rem;
 }
-// section******************************************************************************
-section {
-    max-width: 100%;
-    padding: 3rem .5rem 8rem;
-    @media (max-width: 992px) {
-        padding: 3rem .5rem 5rem;
-    }
-        
-    
-}
-.section2 {
-    height: 100vh;
-    flex: 1 0 0;
-    figure{
-        max-width: 50%;
-    }
-}
-.section4{
-    background-image: url(../../images/Rectangle\ 9.svg);
-    background-repeat: no-repeat;
-    background-position: center;
 
-}
-.section6 {
-    // background-image: url(../../images/);
-    
-    padding-right: 2rem;
-    padding-left: 2rem;
-    main.card-item{
-        height: 100vh;
-        .card{
-            position: absolute;
-            max-width: 50%;
-        }
-        .card:nth-child(1) {
-            transform: rotate(-5deg);
-            top: 0;
-            left: 0;
-        }
-    
-        .card:last-child {
-            transform: rotate(6.5deg);
-            right: 0;
-            bottom: 0;
-        }
-    }
-}
 
-.section7 {
-
-    >.pic {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        overflow-x: hidden;
-
-        img {
-            width: 120%;
-        }
-    }
-
-    main {
-        position: absolute;
-        top: -1%;
-        margin-top: 20%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%);
-
-        .pic {
-            width: 30%;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-}
 
 // module*******************************************************************************
 
@@ -152,13 +77,6 @@ section {
 
 .box-shadow-linear {}
 
-.card-body {
-    h5.card-title {
-        padding: .25rem;
-        top: 0;
-        left: 0;
-    }
-}
 
 .rounded-20 {
     border-radius: 20px !important;
@@ -181,4 +99,193 @@ section {
     to {
         transform: scale(1);
     }
+}
+
+@keyframes  upDown {
+    0% { top: 0;}
+
+    50% {top: -10px;}
+
+    100% {top: 0;}
+}
+
+
+// section******************************************************************************
+section {
+    max-width: 100%;
+    padding: 3rem .5rem 8rem;
+
+    @include media-breakpoint-down(lg) {
+        padding: 3rem .5rem 5rem;
+    }
+
+}
+
+.section2 {
+    height: 100vh;
+    flex: 1 0 0;
+
+    figure {
+        max-width: 50%;
+    }
+}
+
+.section4 {
+    background-image: url(../../images/Rectangle\ 9.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.section6 {
+    // background-image: url(../../images/);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    main {
+        margin: 0 auto;
+        height: 50vw;
+        width: 100%;
+
+        .card {
+            margin: 0;
+            position: absolute;
+            width: 700px;
+            height: 410px;
+            padding: 2em 3.25em;
+
+            // font-size: calc(1.3rem);
+            h5.card-title {
+                @extend .trophy-card-bg;
+                padding: .25rem;
+
+                span {
+                    padding: .5rem 0.75rem;
+                }
+            }
+            &:nth-child(1) {
+                transform: rotate(-5deg);
+                top: 0;
+                left: 0;
+
+                h5.card-title {
+                    margin-left: -5%;
+                }
+            }
+
+            &:last-child {
+                transform: rotate(6.5deg);
+                right: 0;
+                bottom: 0;
+
+                h5.card-title {
+                    margin-top: -3%;
+                    margin-right: -5%;
+                }
+            }
+        }
+
+        // RWD
+        @include media-breakpoint-down(xxl) {
+            .card {
+                width: 630px;
+                height: 373px;
+            }
+        }
+
+
+        @include media-breakpoint-down(xl) {
+            .card {
+                width: 560px;
+                padding: 1.75em 3em;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            height: 60vw;
+
+            .card {
+                width: calc(420px + 10vw);
+                height: auto;
+                // font-size: calc(1rem);
+
+                .card-body {
+                    padding: 3.25rem 1.5rem 1rem;
+
+                    h5.card-title {
+                        font-size: calc(1.3rem);
+                    }
+                }
+            }
+        }
+
+        // @include media-breakpoint-down(md) {
+        //     height: 80vh;
+        //     padding: 1.25em .5em;
+
+        //     .card {
+        //         width: calc(360px + 10vw);
+        //     }
+
+        // }
+
+        @include media-breakpoint-down(md) {
+            height: auto;
+
+            .card {
+                width: 100%;
+                padding: 1.5em 1.75em;
+                margin-top: 3rem;
+                position: relative;
+                animation: upDown 1.25s ease-in-out infinite;
+                &:nth-child(1) {
+                    transform: rotate(0);
+                }
+
+                &:last-child {
+                    transform: rotate(0);
+
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @include media-breakpoint-down(sm){
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+.section7 {
+
+    >.pic {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        overflow-x: hidden;
+
+        img {
+            width: 120%;
+        }
+    }
+
+    main {
+        position: absolute;
+        top: -1%;
+        margin-top: 20%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%);
+
+        .pic {
+            width: 30%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
 }
