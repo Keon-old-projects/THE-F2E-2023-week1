@@ -4,13 +4,65 @@ body {
   background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash 1.png");
 }
 
-section {
-  max-width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 2rem;
+header {
+  padding: 2.5rem 2rem;
 }
 
+section {
+  max-width: 100%;
+  padding: 3rem 0.5rem 8rem;
+}
+@media (max-width: 992px) {
+  section {
+    padding: 3rem 0.5rem 5rem;
+  }
+}
+
+.section2 {
+  height: 100vh;
+  flex: 1 0 0;
+}
+.section2 figure {
+  max-width: 50%;
+}
+
+.section4 {
+  background-image: url(../../images/Rectangle\ 9.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section6 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.section6 main.card-item {
+  height: 100vh;
+}
+.section6 main.card-item .card {
+  position: absolute;
+  max-width: 50%;
+}
+.section6 main.card-item .card:nth-child(1) {
+  transform: rotate(-5deg);
+  top: 0;
+  left: 0;
+}
+.section6 main.card-item .card:last-child {
+  transform: rotate(6.5deg);
+  right: 0;
+  bottom: 0;
+}
+
+.section7 > .pic {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+.section7 > .pic img {
+  width: 120%;
+}
 .section7 main {
   position: absolute;
   top: -1%;
@@ -19,9 +71,11 @@ section {
   width: 100%;
   transform: translate(-50%);
 }
-
-.ZigZag span {
-  margin-top: -15px;
+.section7 main .pic {
+  width: 30%;
+}
+.section7 main .pic img {
+  width: 100%;
 }
 
 .top-middle {
@@ -54,7 +108,6 @@ section {
 .after-arrow {
   position: relative;
 }
-
 .after-arrow::after {
   content: " ";
   background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
@@ -68,20 +121,18 @@ section {
   transform: translateY(-100%);
 }
 
-.f-img {
-  width: 35%;
+.ZigZag span {
+  margin-top: -15px;
 }
 
 .trophy-card-bg {
   background: linear-gradient(to right, #5EE7DF, #B490CA);
 }
 
-.card-header {
-  padding: 4px;
-}
-.card-header h5.card-title {
-  top: -3%;
-  left: -1%;
+.card-body h5.card-title {
+  padding: 0.25rem;
+  top: 0;
+  left: 0;
 }
 
 .rounded-20 {
@@ -92,7 +143,7 @@ section {
   list-style-type: disc;
 }
 
-.toBig {
+.ani-toBig {
   -webkit-animation: enlarge 1.5s ease-in-out;
           animation: enlarge 1.5s ease-in-out;
 }
