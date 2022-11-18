@@ -11378,22 +11378,6 @@ header {
   display: inline-block;
 }
 
-.after-arrow {
-  position: relative;
-}
-.after-arrow::after {
-  content: " ";
-  background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
-  background-size: contain;
-  display: block;
-  width: 8rem;
-  height: 8rem;
-  position: absolute;
-  left: 105%;
-  top: 50%;
-  transform: translateY(-100%);
-}
-
 .ZigZag span {
   margin-top: -15px;
 }
@@ -11408,11 +11392,6 @@ header {
 
 .list-group-disc {
   list-style-type: disc;
-}
-
-.ani-toBig {
-  -webkit-animation: enlarge 1.5s ease-in-out;
-          animation: enlarge 1.5s ease-in-out;
 }
 
 @-webkit-keyframes enlarge {
@@ -11470,12 +11449,31 @@ section {
 }
 .section2 figure {
   max-width: 50%;
+  -webkit-animation: enlarge 1.5s ease-in-out;
+          animation: enlarge 1.5s ease-in-out;
 }
 
 .section4 {
   background-image: url(../../images/Rectangle\ 9.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.section5 .card {
+  flex: 0 1 20%;
+  position: relative;
+}
+.section5 .card:not(:last-child)::after {
+  content: " ";
+  background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  left: 105%;
+  top: 45%;
+  transform: translateY(-100%);
 }
 
 .section6 {
@@ -11559,8 +11557,16 @@ section {
   .section6 main .card:nth-child(1) {
     transform: rotate(0);
   }
+  .section6 main .card:nth-child(1) h5.card-title, .section6 main .card:nth-child(1) .card-title.h5 {
+    margin-top: -2%;
+    margin-left: -3%;
+  }
   .section6 main .card:last-child {
     transform: rotate(0);
+  }
+  .section6 main .card:last-child h5.card-title, .section6 main .card:last-child .card-title.h5 {
+    margin-top: -2%;
+    margin-right: -3%;
   }
 }
 @media (max-width: 767.98px) {

@@ -46,23 +46,7 @@ header {
     display: inline-block;
 }
 
-.after-arrow {
-    position: relative;
 
-    &::after {
-        content: " ";
-        background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
-        background-size: contain;
-        display: block;
-        width: 8rem;
-        height: 8rem;
-        position: absolute;
-        left: 105%;
-        top: 50%;
-        transform: translateY(-100%);
-    }
-
-}
 
 .ZigZag {
     span {
@@ -87,9 +71,7 @@ header {
 }
 
 // animation**************************************************************************
-.ani-toBig {
-    animation: enlarge 1.5s ease-in-out;
-}
+
 
 @keyframes enlarge {
     from {
@@ -124,9 +106,9 @@ section {
 .section2 {
     height: 100vh;
     flex: 1 0 0;
-
     figure {
         max-width: 50%;
+        animation: enlarge 1.5s ease-in-out;
     }
 }
 
@@ -134,9 +116,26 @@ section {
     background-image: url(../../images/Rectangle\ 9.svg);
     background-repeat: no-repeat;
     background-position: center;
-
 }
-
+.section5{
+    .card{
+        flex:0 1 20%;
+        position: relative;
+    
+        &:not(:last-child)::after {
+            content: " ";
+            background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
+            background-size: contain;
+            display: inline-block;
+            width: 5vw;
+            height: 5vw;
+            position: absolute;
+            left: 105%;
+            top: 45%;
+            transform: translateY(-100%);
+        }
+    }
+}
 .section6 {
     // background-image: url(../../images/);
     padding-right: 2rem;
@@ -218,16 +217,6 @@ section {
             }
         }
 
-        // @include media-breakpoint-down(md) {
-        //     height: 80vh;
-        //     padding: 1.25em .5em;
-
-        //     .card {
-        //         width: calc(360px + 10vw);
-        //     }
-
-        // }
-
         @include media-breakpoint-down(md) {
             height: auto;
 
@@ -239,11 +228,18 @@ section {
                 animation: upDown 1.25s ease-in-out infinite;
                 &:nth-child(1) {
                     transform: rotate(0);
+                    h5.card-title {
+                        margin-top: -2%;
+                        margin-left: -3%;
+                    }
                 }
 
                 &:last-child {
                     transform: rotate(0);
-
+                    h5.card-title {
+                        margin-top: -2%;
+                        margin-right: -3%;
+                    }
                 }
             }
         }
