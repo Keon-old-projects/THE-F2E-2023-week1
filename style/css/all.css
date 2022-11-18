@@ -11458,6 +11458,9 @@ section {
   background-repeat: no-repeat;
   background-position: center;
 }
+.section4 .card {
+  max-width: 30%;
+}
 
 .section5 .card {
   flex: 0 1 20%;
