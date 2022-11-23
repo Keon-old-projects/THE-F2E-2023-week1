@@ -11571,6 +11571,17 @@ section {
   }
 }
 
+.section1 .wrapper {
+  left: -15%;
+  top: 5%;
+}
+.section1 .wrapper h1, .section1 .wrapper .h1 {
+  transform: matrix(0.99, -0.19, 0.13, 0.98, 0, 0);
+}
+.section1 .btn {
+  z-index: 5;
+}
+
 .section2 {
   height: 100vh;
   flex: 1 0 0;
@@ -11668,6 +11679,7 @@ section {
 .section6 {
   padding-right: 2rem;
   padding-left: 2rem;
+  background: url("../../images/");
 }
 .section6 main {
   margin: 0 auto;

@@ -116,6 +116,20 @@ section {
 
 }
 
+// 網頁區塊 1 ：Banner----------------------------------------------
+.section1{
+    .wrapper{
+        left: -15%;
+        top: 5%;
+        h1{
+            transform: matrix(0.99, -0.19, 0.13, 0.98, 0, 0);
+        }
+    }
+    .btn{
+        z-index: 5;
+    }
+}
+// 網頁區塊 2 ：提出問題---------------------------------------------
 .section2 {
     height: 100vh;
     flex: 1 0 0;
@@ -225,6 +239,7 @@ section {
     // background-image: url(../../images/);
     padding-right: 2rem;
     padding-left: 2rem;
+    background: url('../../images/');
 
     main {
         margin: 0 auto;
