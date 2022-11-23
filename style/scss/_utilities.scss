@@ -167,12 +167,22 @@ $utilities: map-merge(
     "viewport-width": (
       property: width,
       class: vw,
-      values: (100: 100vw)
+      values: (
+        100: 100vw,
+        75: 75vw,
+        50: 50vw,
+        25: 25vw
+        )
     ),
     "min-viewport-width": (
       property: min-width,
       class: min-vw,
-      values: (100: 100vw)
+      values: (
+        100: 100vw,
+        75: 75vw,
+        50: 50vw,
+        25: 25vw
+        )
     ),
     "height": (
       property: height,
@@ -193,12 +203,22 @@ $utilities: map-merge(
     "viewport-height": (
       property: height,
       class: vh,
-      values: (100: 100vh)
+      values: (
+        100: 100vh,
+        75: 75vh,
+        50: 50vh,
+        25: 25vh
+        )
     ),
     "min-viewport-height": (
       property: min-height,
       class: min-vh,
-      values: (100: 100vh)
+      values: (
+        100: 100vh,
+        75: 75vh,
+        50: 50vh,
+        25: 25vh
+        )
     ),
     // scss-docs-end utils-sizing
     // Flex utilities

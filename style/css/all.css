@@ -6885,8 +6885,32 @@ textarea.form-control-lg {
   width: 100vw !important;
 }
 
+.vw-75 {
+  width: 75vw !important;
+}
+
+.vw-50 {
+  width: 50vw !important;
+}
+
+.vw-25 {
+  width: 25vw !important;
+}
+
 .min-vw-100 {
   min-width: 100vw !important;
+}
+
+.min-vw-75 {
+  min-width: 75vw !important;
+}
+
+.min-vw-50 {
+  min-width: 50vw !important;
+}
+
+.min-vw-25 {
+  min-width: 25vw !important;
 }
 
 .h-25 {
@@ -6917,8 +6941,32 @@ textarea.form-control-lg {
   height: 100vh !important;
 }
 
+.vh-75 {
+  height: 75vh !important;
+}
+
+.vh-50 {
+  height: 50vh !important;
+}
+
+.vh-25 {
+  height: 25vh !important;
+}
+
 .min-vh-100 {
   min-height: 100vh !important;
+}
+
+.min-vh-75 {
+  min-height: 75vh !important;
+}
+
+.min-vh-50 {
+  min-height: 50vh !important;
+}
+
+.min-vh-25 {
+  min-height: 25vh !important;
 }
 
 .flex-fill {
@@ -11434,12 +11482,17 @@ header {
   }
 }
 section {
-  max-width: 100%;
-  padding: 3rem 0.5rem 8rem;
+  padding: 1.5rem 0.5rem 1rem;
 }
-@media (max-width: 991.98px) {
+@media (min-width: 768px) {
   section {
-    padding: 3rem 0.5rem 5rem;
+    padding: 3rem 0.5rem 3rem;
+  }
+}
+@media (min-width: 992px) {
+  section {
+    max-width: 100%;
+    padding: 3rem 0.5rem 8rem;
   }
 }
 
@@ -11458,25 +11511,73 @@ section {
   background-repeat: no-repeat;
   background-position: center;
 }
-.section4 .card {
-  max-width: 30%;
+.section4 main {
+  width: 50%;
+}
+.section4 main .card {
+  max-width: 100%;
+  margin: 0.75rem;
+}
+@media (min-width: 768px) {
+  .section4 main {
+    width: 100%;
+  }
+  .section4 main .card {
+    max-width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .section4 main {
+    width: 75%;
+  }
+  .section4 main .card {
+    max-width: 30%;
+  }
 }
 
-.section5 .card {
-  flex: 0 1 20%;
-  position: relative;
+.section5 main {
+  width: 75%;
 }
-.section5 .card:not(:last-child)::after {
-  content: " ";
-  background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
-  background-size: contain;
-  display: inline-block;
-  width: 5vw;
-  height: 5vw;
-  position: absolute;
-  left: 105%;
-  top: 45%;
-  transform: translateY(-100%);
+@media (min-width: 576px) {
+  .section5 main {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .section5 .card {
+    flex: 0 1 40%;
+    position: relative;
+  }
+  .section5 .card:not(:nth-child(2n))::after {
+    content: " ";
+    background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 105%;
+    top: 45%;
+    transform: translateY(-100%);
+  }
+}
+@media (min-width: 768px) {
+  .section5 .card {
+    flex: 0 1 20%;
+    position: relative;
+  }
+  .section5 .card:not(:last-child)::after {
+    content: " ";
+    background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 105%;
+    top: 45%;
+    transform: translateY(-100%);
+  }
 }
 
 .section6 {
@@ -11607,4 +11708,8 @@ section {
 }
 .section7 main .pic img {
   width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #FFB400;
 }/*# sourceMappingURL=all.css.map */
