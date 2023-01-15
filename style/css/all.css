@@ -5,6 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css");
 :root {
   --bs-blue: #0000C5;
   --bs-indigo: #B490CA;
@@ -11470,8 +11471,8 @@ body {
   background-image: url("../../images/arthur-volkers-GX542ehZwSk-unsplash 1.png");
 }
 
-header {
-  padding: 2.5rem 2rem;
+nav {
+  padding: 0.5rem 2rem;
 }
 
 .top-middle {
@@ -11517,60 +11518,24 @@ header {
   list-style-type: disc;
 }
 
-@-webkit-keyframes enlarge {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+.btn-primary:hover {
+  background-color: #FFB400;
 }
 
-@keyframes enlarge {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes upDown {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -10px;
-  }
-  100% {
-    top: 0;
-  }
-}
-@keyframes upDown {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -10px;
-  }
-  100% {
-    top: 0;
-  }
-}
-section {
+.section {
   padding: 1.5rem 0.5rem 1rem;
 }
 @media (min-width: 768px) {
-  section {
+  .section {
     padding: 3rem 0.5rem 3rem;
   }
 }
 @media (min-width: 992px) {
-  section {
+  .section {
     max-width: 100%;
     padding: 3rem 0.5rem 8rem;
   }
 }
-
 .section1 .wrapper {
   left: -15%;
   top: 5%;
@@ -11581,7 +11546,6 @@ section {
 .section1 .btn {
   z-index: 5;
 }
-
 .section2 {
   height: 100vh;
   flex: 1 0 0;
@@ -11591,7 +11555,6 @@ section {
   -webkit-animation: enlarge 1.5s ease-in-out;
           animation: enlarge 1.5s ease-in-out;
 }
-
 .section4 {
   background-image: url(../../images/Rectangle\ 9.svg);
   background-repeat: no-repeat;
@@ -11621,7 +11584,6 @@ section {
     max-width: 30%;
   }
 }
-
 .section5 .card {
   flex: 0 1 auto;
 }
@@ -11675,7 +11637,6 @@ section {
     top: 45%;
   }
 }
-
 .section6 {
   padding-right: 2rem;
   padding-left: 2rem;
@@ -11782,7 +11743,6 @@ section {
     padding-right: 0.5rem;
   }
 }
-
 .section7 > .pic {
   width: 100%;
   margin: 0 auto;
@@ -11812,6 +11772,42 @@ section {
   transform: scale(1.15);
 }
 
-.btn-primary:hover {
-  background-color: #FFB400;
+@-webkit-keyframes enlarge {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes upDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes upDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
 }/*# sourceMappingURL=all.css.map */
