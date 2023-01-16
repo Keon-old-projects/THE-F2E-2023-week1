@@ -1,11 +1,13 @@
 // bs5
 // @import "bootstrap/bootstrap"; 
 
-// 全域變數&mixin
 
+$enable-negative-margins: true ;
 // 外部套件
 @import "bootstrap.scss";
 @import url('https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css');
+
+// 全域變數&mixin
 
 //自訂css
 // base******************************************************************************
@@ -18,23 +20,91 @@ header {
     padding: .5rem 2rem;
 }
 
-
+h1{
+    font-size: 136px;
+    transform: rotate(-15deg);
+}
 
 // module*******************************************************************************
+
+.pos-center {
+    position: absolute;
+    top: 25%;
+}
+
+// 背景
+.bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-1 {
+        background-image: url("../../images/frontend\ engineer.png");
+    }
+
+    &-2 {
+        background-image: url("../../images/section-3.png");
+    }
+    &-troubled {
+        background-image: url("../../images/困擾\ 1.png");
+    }
+
+    @include media-breakpoint-up(lg) {
+        &-3 {
+            background-image: url("../../images/left\ hand.png");
+            top: 51%;
+            left: -37%;
+        }
+
+        &-4 {
+            background-image: url("../../images/right\ hand.png");
+            top: 51%;
+            left: 30%
+        }
+
+    }
+
+    @include media-breakpoint-up(xl) {
+        &-3 {
+            background-image: url("../../images/left\ hand.png");
+            top: 51%;
+            left: -33%;
+        }
+
+        &-4 {
+            background-image: url("../../images/right\ hand.png");
+            top: 51%;
+            left: 26%
+        }
+
+    }
+
+    @include media-breakpoint-up(xxl) {
+        &-3 {
+            background-image: url("../../images/left\ hand.png");
+            top: 51%;
+            left: -28%;
+        }
+
+        &-4 {
+            background-image: url("../../images/right\ hand.png");
+            top: 51%;
+            left: 23%
+        }
+
+    }
+
+
+}
 
 .top-middle {
     top: 50%;
     margin-top: -80px;
 }
 
-.troubled {
-    height: 100vh;
-    background-image: url(../../images/困擾\ 1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
 
+
+// 跑馬燈
 .loop {
     display: inline-block;
     font-family: "Laser Corps 3D";
@@ -43,27 +113,19 @@ header {
     white-space: nowrap;
     height: 100%;
     -webkit-text-stroke: 1px white;
-}
 
-.loop>span {
-    display: inline-block;
-}
-
-
-
-.ZigZag {
     span {
-        margin-top: -15px;
+        display: inline-block;
     }
 }
+
 
 .trophy-card-bg {
     background: linear-gradient(to right, #5EE7DF, #B490CA);
 
 }
 
-
-
+// 圓角
 .rounded {
     &-20 {
         border-radius: 20px !important;
@@ -71,10 +133,12 @@ header {
 
 }
 
+// 清單樣式
 .list-group-disc {
     list-style-type: disc;
 }
 
+// 按鈕
 .btn-primary:hover {
     background-color: #FFB400;
 }
@@ -93,74 +157,77 @@ header {
         max-width: 100%;
         padding: 3rem .5rem 8rem;
     }
-    
+
     // 網頁區塊 1 ：Banner----------------------------------------------
-    &1{
-        .wrapper{
+    &1 {
+        .wrapper {
             left: -15%;
             top: 5%;
-            h1{
+
+            h1 {
                 transform: matrix(0.99, -0.19, 0.13, 0.98, 0, 0);
             }
         }
-        .btn{
+
+        .btn {
             z-index: 5;
         }
     }
+
     // 網頁區塊 2 ：提出問題---------------------------------------------
     &2 {
         height: 100vh;
         flex: 1 0 0;
-    
+
         figure {
             max-width: 50%;
             animation: enlarge 1.5s ease-in-out;
         }
     }
-    
+
     // 網頁區塊 4：三大主題-------------------------------------------
     &4 {
         background-image: url(../../images/Rectangle\ 9.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-    
+
         main {
             width: 50%;
-    
+
             .card {
                 max-width: 100%;
                 margin: .75rem;
             }
-    
+
             @include media-breakpoint-up(md) {
                 width: 100%;
-    
+
                 .card {
                     max-width: 30%;
                 }
             }
-    
+
             @include media-breakpoint-up(lg) {
                 width: 75%;
-    
+
                 .card {
                     max-width: 30%;
                 }
             }
         }
-    
+
     }
-    
+
     // 網頁區塊 5： 活動說明-------------------------------------------
     &5 {
         .card {
             flex: 0 1 auto;
-    
+
             @include media-breakpoint-up(md) {
                 flex: 0 1 40%;
                 position: relative;
-    
+
                 &:not(:nth-child(2n))::after {
                     content: " ";
                     background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
@@ -174,11 +241,11 @@ header {
                     transform: translateY(-100%);
                 }
             }
-    
+
             @include media-breakpoint-up(lg) {
                 flex: 0 1 20%;
                 position: relative;
-    
+
                 &:not(:last-child)::after {
                     content: " ";
                     background: url(../../images/Icon/Group\ 4.svg) no-repeat center;
@@ -192,9 +259,9 @@ header {
                     transform: translateY(-100%);
                 }
             }
-    
+
             @include media-breakpoint-up(xl) {
-    
+
                 &:not(:last-child)::after {
                     position: absolute;
                     width: 4vw;
@@ -203,66 +270,67 @@ header {
                     top: 38%;
                 }
             }
+
             @include media-breakpoint-up(xxl) {
-    
+
                 &:not(:last-child)::after {
                     top: 45%;
                 }
             }
         }
     }
-    
+
     //網頁區塊 6：獎項設計 -------------------------------------------
     &6 {
         // background-image: url(../../images/);
         padding-right: 2rem;
         padding-left: 2rem;
         background: url('../../images/');
-    
+
         main {
             margin: 0 auto;
             height: 50vw;
             width: 100%;
-    
+
             .card {
                 margin: 0;
                 position: absolute;
                 width: 700px;
                 height: 410px;
                 padding: 2em 3.25em;
-    
+
                 // font-size: calc(1.3rem);
                 h5.card-title {
                     @extend .trophy-card-bg;
                     padding: .25rem;
-    
+
                     span {
                         padding: .5rem 0.75rem;
                     }
                 }
-    
+
                 &:nth-child(1) {
                     transform: rotate(-5deg);
                     top: 0;
                     left: 0;
-    
+
                     h5.card-title {
                         margin-left: -5%;
                     }
                 }
-    
+
                 &:last-child {
                     transform: rotate(6.5deg);
                     right: 0;
                     bottom: 0;
-    
+
                     h5.card-title {
                         margin-top: -3%;
                         margin-right: -5%;
                     }
                 }
             }
-    
+
             // RWD
             @include media-breakpoint-down(xxl) {
                 .card {
@@ -270,55 +338,55 @@ header {
                     height: 373px;
                 }
             }
-    
-    
+
+
             @include media-breakpoint-down(xl) {
                 .card {
                     width: 560px;
                     padding: 1.75em 3em;
                 }
             }
-    
+
             @include media-breakpoint-down(lg) {
                 height: 60vw;
-    
+
                 .card {
                     width: calc(420px + 10vw);
                     height: auto;
                     // font-size: calc(1rem);
-    
+
                     .card-body {
                         padding: 3.25rem 1.5rem 1rem;
-    
+
                         h5.card-title {
                             font-size: calc(1.3rem);
                         }
                     }
                 }
             }
-    
+
             @include media-breakpoint-down(md) {
                 height: auto;
-    
+
                 .card {
                     width: 100%;
                     padding: 1.5em 1.75em;
                     margin-top: 3rem;
                     position: relative;
                     animation: upDown 1.25s ease-in-out infinite;
-    
+
                     &:nth-child(1) {
                         transform: rotate(0);
-    
+
                         h5.card-title {
                             margin-top: -2%;
                             margin-left: -3%;
                         }
                     }
-    
+
                     &:last-child {
                         transform: rotate(0);
-    
+
                         h5.card-title {
                             margin-top: -2%;
                             margin-right: -3%;
@@ -327,59 +395,100 @@ header {
                 }
             }
         }
-    
+
         @include media-breakpoint-down(md) {
             padding-left: 1rem;
             padding-right: 1rem;
         }
-    
+
         @include media-breakpoint-down(sm) {
             padding-left: .5rem;
             padding-right: .5rem;
         }
     }
-    
+
     // 網頁區塊 7：贊助單位-------------------------------------------
     &7 {
-    
+        overflow: hidden;
+        padding: 0;
         >.pic {
+            position: absolute;
+            left: -7%;
+            right: -6%;
+            top: 0;
+            bottom: 5.02%;
             width: 100%;
+            height: 100%;
             margin: 0 auto;
             text-align: center;
-            overflow-x: hidden;
-    
+
             img {
-                width: 120%;
+                width: 110%;
+                height: 100%;
             }
         }
-    
+
         main {
-            position: absolute;
-            top: -1%;
-            margin-top: 20%;
-            left: 50%;
-            transform: translate(-50%);
-    
+            position: relative;
+            // z-index: 2;
             .pic {
-                width: 30%;
+                
                 border-radius: 50%;
                 overflow: hidden;
-    
+
                 img {
                     width: 100%;
                     transition: all .5s;
-    
+
                     &:hover {
                         transform: scale(1.15);
-    
+
                     }
                 }
-    
+
             }
         }
-    
+
     }
 
+}
+
+.s3 {
+    font-weight: bolder;
+    text-align: center;
+    &-title {
+        font-size: 3rem;
+        text-shadow: 8px 12px 9px #5EE7DF;
+        // color: white;
+    }
+
+    &-note {
+        font-size: 1rem;
+        border: #5EE7DF 1px solid;
+        margin-top: .5rem;
+        text-align: end;
+    }
+
+}
+
+.loop {
+    display: inline-block;
+    font-size: 5rem;
+    color: transparent;
+    white-space: nowrap;
+    /*文字必須設為nowrap，否則文字會自動換行*/
+    height: 100%;
+    -webkit-text-stroke: 1px white;
+
+    span {
+        display: inline-block;
+    }
+}
+
+.login-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 
